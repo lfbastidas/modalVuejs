@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+
+
+    <div id="app">
+        <button v-on:click="toggleModal">Show Modal</button>
+        
+        <modal v-if="showModal"
+               v-bind:title='title'
+               v-on:cerrar="toggleModal"
+               >
+          <template v-slot:body-modal>
+            <h2> Este es el cuerpo del componente Modal utilizando slot, el cual introduce html desde el componente padre </h2>
+          </template>
+          
+          
+          
+        </modal>
+      </div>
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src='app.js'></script>
+
+</body>
+</html>
